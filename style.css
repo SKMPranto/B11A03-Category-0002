@@ -8,6 +8,42 @@
 .dark-1{
     color: #403F3F;
 }
+.bg-color-1{
+    background-color: #EFEBE3;
+}
 header{
     background-image: linear-gradient(#FEFEFE,#EFECE4);
 }
+/* Popular Card no 1 gradient style */
+.card-1-gradient{
+    background-image: linear-gradient(to bottom right,#53DB3A ,#D8F7D2);
+}
+
+/* Animated text */
+.animated-txt {
+    display: inline-block;
+    /*justify-content: center;*/
+  }
+  .animated-txt p {
+    overflow: hidden;
+    /* Keeps on a single line*/
+    white-space: nowrap;
+    /*The cursor*/
+    border-right: 2px solid;
+    /* steps = number of characters */
+    animation: typing 3s forwards infinite 0.5s,
+      blink 1s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }

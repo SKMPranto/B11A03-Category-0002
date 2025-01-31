@@ -43,16 +43,23 @@
     <header>
       <!-- Nav Bar Section -->
       <nav
-        class="md:w-[90%] lg:w-[85%] mx-auto p-5 md:flex md:items-center md:justify-between mb-5"
+        class="md:w-[90%] lg:w-[85%] mx-auto p-5 md:flex md:items-center md:justify-between mb-5 border-b border-green-500 md:border-none"
       >
         <!-- Nav Bar logo and hamburger icon section -->
         <div class="md:w-full lg:w-auto flex justify-between items-center">
           <img
             src="./c2-assets/logo-header.png"
             alt="Image"
-            class="w-[100px] h-[43px] md:w-[160px] md:h-[62px]"
+            class="w-[100px] h-[43px] md:w-[160px] md:h-[62px] hidden md:inline"
           />
-          <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+          <img
+            class="md:hidden block"
+            src="./c2-assets/logo-without-name.png"
+            alt="Image"
+          />
+          <span
+            class="text-3xl cursor-pointer mx-2 lg:hidden block text-green-500"
+          >
             <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
           </span>
         </div>
@@ -107,11 +114,13 @@
           <h1 class="text-center text-3xl md:text-4xl lg:text-6xl">
             Freshness
             <span class="text-green-500"
-              >You Can <br />
+              >You Can<br />
               Count</span
             >
             On, Prices <br class="md:hidden block" />
-            You’ll Love!
+            <span class="animated-txt">
+              <p class="md:h-[33px] lg:h-[52px]">You’ll Love !</p>
+            </span>
           </h1>
           <p class="dark-1 text-center pt-3 md:pt-5 lg:text-[24px]">
             Shop your daily essentials at unbeatable
@@ -123,13 +132,315 @@
         <!-- Banner Image Section -->
         <div class="overflow-hidden">
           <img
-            class="mx-auto transition-transform duration-600 ease-in transform hover:scale-105"
+            class="mx-auto"
             src="./c2-assets/hero-vegetables.png"
             alt="Image"
           />
         </div>
       </div>
     </header>
+    <!-- Main Section -->
+    <main>
+      <!-- Services Section -->
+      <section class="md:w-[90%] lg:w-[85%] mx-auto mb-10">
+        <!-- Title  -->
+        <h1 class="text-2xl md:text-4xl p-5 md:p-8 text-green-500">Services</h1>
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center gap-2 space-y-4"
+        >
+          <!-- 24/7 Service card -->
+          <div
+            class="w-[350px] lg:w-[500px] h-[380px] bg-color-1 rounded-2xl p-2 lg:p-5 text-center mt-[30px]"
+          >
+            <div class="bg-white w-[130px] h-[130px] rounded-full mx-auto">
+              <img src="./c2-assets/service.png" alt="Image" class="p-5" />
+            </div>
+            <h1 class="text-2xl p-2 font-bold">24/7 Services</h1>
+            <p class="dark-1 py-3">
+              At <span class="font-bold">Nature's Platter</span>, we provide
+              fresh produce, quality essentials, and everyday groceries at great
+              prices. Enjoy convenient in-store shopping, quick checkout, and
+              home delivery options for a hassle-free <br />
+              experience!
+            </p>
+          </div>
+          <!-- Fast Delivery card -->
+          <div
+            class="w-[350px] lg:w-[500px] h-[380px] bg-color-1 rounded-2xl p-2 lg:p-5 text-center"
+          >
+            <div class="bg-white w-[130px] h-[130px] rounded-full mx-auto">
+              <img src="./c2-assets/delivery.png" alt="Image" class="p-5" />
+            </div>
+            <h1 class="text-2xl p-2 font-bold">Fast Delivery</h1>
+            <p class="dark-1 py-3">
+              Get your groceries delivered quickly and hassle-free! At
+              <span class="font-bold">Nature's Platter</span>, we offer fast and
+              reliable delivery, ensuring fresh and quality products arrive at
+              your doorstep in no time. Shop with ease and <br />
+              save time!
+            </p>
+          </div>
+          <!-- Healthy Products card -->
+          <div
+            class="w-[350px] lg:w-[500px] h-[380px] bg-color-1 rounded-2xl p-2 lg:p-5 text-center"
+          >
+            <div class="bg-white w-[130px] h-[130px] rounded-full mx-auto">
+              <img src="./c2-assets/healthy.png" alt="Image" class="p-5" />
+            </div>
+            <h1 class="text-2xl p-2 font-bold">Healthy Products</h1>
+            <p class="dark-1 py-3">
+              Shop a wide range of fresh, organic, and nutritious products for a
+              healthier lifestyle. From farm-fresh produce to wholesome snacks,
+              we provide high-quality, healthy choices for you and your <br />
+              family!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Products Section -->
+      <section class="bg-color-1">
+        <div class="md:w-[90%] lg:w-[85%] mx-auto mb-10 py-8 md:py-12">
+          <!-- Title -->
+          <h1 class="text-2xl md:text-4xl p-5 md:p-5 text-green-500">
+            Popular Products
+          </h1>
+          <!-- Products Container -->
+          <div class="flex flex-col 2xl:flex-row justify-between items-center">
+            <!-- Card no-1 -->
+            <div
+              class="w-[350px] lg:w-[500px] h-[380px] card-1-gradient rounded-2xl lg:p-5 mt-[30px] relative mb-10"
+            >
+              <!-- txt of card no 1 -->
+              <h1 class="text-2xl md:text-4xl text-white font-bold pt-10 pl-5">
+                30% off
+              </h1>
+              <!-- Description of card no 1 -->
+              <p class="dark-1 pt-3 pl-5 lg:text-xl">
+                Discover a world of treats, toys, and <br />
+                essentials handpicked for
+              </p>
+              <!-- Buy Now Button -->
+              <button
+                class="md:text-xl bg-white text-black border border-white duration-500 cursor-pointer px-6 py-2 hover:bg-gray-100 rounded-lg font-bold mt-3 ml-5"
+              >
+                Buy Now
+              </button>
+              <!-- Image of card no 1 -->
+              <img
+                src="./c2-assets/vegetable-offer.png"
+                alt="Image"
+                class="w-[269px] absolute top-32 left-22 lg:left-59"
+              />
+            </div>
+            <!-- Card no 2 -->
+            <div
+              class="grid grid-cols-2 grid-rows-4 md:grid-cols-3 md:grid-rows-3 gap-3 2xl:gap-8"
+            >
+              <!-- product no 1 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/onion.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    Onion 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 1 -->
+
+              <!-- product no 2 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/tomato.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    tomato 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 2 -->
+
+              <!-- product no 3 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/potato.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    potato 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 3 -->
+
+              <!-- product no 4 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/tomato.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    tomato 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 4 -->
+
+              <!-- product no 5 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/onion.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    Onion 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 5 -->
+
+              <!-- product no 6 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/tomato.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    tomato 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 6 -->
+
+              <!-- product no 7 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/onion.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    Onion 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 7 -->
+
+              <!-- product no 8 -->
+              <div
+                class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+              >
+                <img
+                  class="w-[53px] md:w-[86px]"
+                  src="./c2-assets/potato.png"
+                  alt="Image"
+                />
+                <div class="md:pr-15">
+                  <h2 class="text-[12px] md:text-lg font-medium">
+                    <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                    4.5
+                  </h2>
+                  <h1 class="text-[13px] md:text-base font-extrabold">
+                    potato 1 KG
+                  </h1>
+                  <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                </div>
+              </div>
+              <!-- end of product no 8 -->
+
+              <!-- product no 9 -->
+              <div class="hidden md:inline">
+                <div
+                  class="w-[175px] h-[80px] md:w-[275px] md:h-[118px] bg-white rounded-xl flex justify-evenly items-center"
+                >
+                  <img
+                    class="w-[53px] md:w-[86px]"
+                    src="./c2-assets/potato.png"
+                    alt="Image"
+                  />
+                  <div class="md:pr-15">
+                    <h2 class="text-[12px] md:text-lg font-medium">
+                      <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                      4.5
+                    </h2>
+                    <h1 class="text-[13px] md:text-base font-extrabold">
+                      potato 1 KG
+                    </h1>
+                    <h2 class="text-[12px] md:text-base font-medium">$39.99</h2>
+                  </div>
+                </div>
+              </div>
+              <!-- end of product no 9 -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Script for hamburger menu bar -->
     <script>
