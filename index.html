@@ -1,31 +1,149 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nature's Platter</title>
+    <!-- style.css link -->
+    <link rel="stylesheet" href="style.css" />
     <!-- Fav Icon -->
-    <link rel="shortcut icon" href="./c2-assets/healthy.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./c2-assets/healthy.png"
+      type="image/x-icon"
+    />
     <!-- Google Font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Icon.IO Icons CDN -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <!-- TailwindCSS CDN -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- DaisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vanilla CSS -->
-    <style>
-        .font-sora{
-            font-family: "Sora", serif;
-        }
-    </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Nav Bar Section -->
+      <nav
+        class="md:w-[90%] lg:w-[85%] mx-auto p-5 md:flex md:items-center md:justify-between mb-5"
+      >
+        <!-- Nav Bar logo and hamburger icon section -->
+        <div class="md:w-full lg:w-auto flex justify-between items-center">
+          <img
+            src="./c2-assets/logo-header.png"
+            alt="Image"
+            class="w-[100px] h-[43px] md:w-[160px] md:h-[62px]"
+          />
+          <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+            <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+
+        <!-- Menu bar Items section -->
+
+        <ul
+          class="lg:flex lg:items-center lg:gap-x-6 z-[-1] lg:z-auto lg:static absolute bg-white md:bg-transparent px-5 md:ml-6 w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+        >
+          <li class="py-4">
+            <a href="#" class="text-xl hover:text-green-500 duration-500"
+              >Product</a
+            >
+          </li>
+          <li class="py-4">
+            <a href="#" class="text-xl hover:text-green-500 duration-500"
+              >Services</a
+            >
+          </li>
+          <li class="py-4">
+            <a href="#" class="text-xl hover:text-green-500 duration-500"
+              >Contact Us</a
+            >
+          </li>
+          <span
+            class="text-2xl hover:text-green-500 duration-500 cursor-pointer inline-block"
+            ><ion-icon name="search-outline"></ion-icon
+          ></span>
+          <span
+            class="text-3xl hover:text-green-500 duration-500 cursor-pointer"
+            ><ion-icon name="cart-outline"></ion-icon
+          ></span>
+          <br class="lg:hidden block" />
+          <!-- Button Section -->
+          <button
+            class="bg-white text-green-500 border border-green-500 duration-500 cursor-pointer px-6 py-2 hover:bg-green-500 hover:text-white rounded-lg"
+          >
+            Login
+          </button>
+          <button
+            class="bg-green-400 text-white border border-green-400 duration-500 cursor-pointer px-6 py-2 hover:bg-green-600 rounded-lg"
+          >
+            Register
+          </button>
+        </ul>
+      </nav>
+
+      <!-- Banner Section -->
+      <div class="md:w-[90%] lg:w-[85%] mx-auto mb-10">
+        <!-- Banner Text Section -->
+        <div class="mb-5">
+          <h1 class="text-center text-3xl md:text-4xl lg:text-6xl">
+            Freshness
+            <span class="text-green-500"
+              >You Can <br />
+              Count</span
+            >
+            On, Prices <br class="md:hidden block" />
+            You’ll Love!
+          </h1>
+          <p class="dark-1 text-center pt-3 md:pt-5 lg:text-[24px]">
+            Shop your daily essentials at unbeatable
+            <br class="md:hidden block" />
+            prices. From fresh produce to pantry <br />
+            staples, we’ve got you covered every day!
+          </p>
+        </div>
+        <!-- Banner Image Section -->
+        <div class="overflow-hidden">
+          <img
+            class="mx-auto transition-transform duration-600 ease-in transform hover:scale-105"
+            src="./c2-assets/hero-vegetables.png"
+            alt="Image"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Script for hamburger menu bar -->
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+
+        e.name === "menu-outline"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu-outline"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
+  </body>
 </html>
